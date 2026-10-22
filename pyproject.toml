@@ -1,0 +1,11 @@
+[project]
+name = "dungeon-engine"
+version = "0.1.0"
+description = "Deterministic turn engine for a future roguelike"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Madsvs123" }]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
