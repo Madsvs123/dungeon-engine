@@ -20,6 +20,12 @@ py -3 -m dungeon_engine --seed 42 --turns 500 --hash-out
 
 The process prints one SHA-256 hex digest of the final state.
 
+With `--debug`, the process prints one line, `seed=<seed> turn=<turn> actors=<count>`. If `--hash-out` is also set, that line comes first and the hash follows.
+
+```
+py -3 -m dungeon_engine --seed 42 --turns 500 --debug
+```
+
 The CLI runs a fixed party of three actors (`wanderer`, `guard`, `scout`). `dungeon_engine.runner.run` accepts an explicit actor list, including an empty one.
 
 ## Test
