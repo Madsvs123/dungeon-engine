@@ -11,6 +11,10 @@
 
 The returned list is action order. An id can appear more than once. Ties in
 a wave break by ascending actor id. Actor objects are mutated in place.
+
+Example: speeds 300 and 100, both starting at energy 0. After seven steps the
+fast actor has acted twice and still holds a remainder of 100. The slow actor
+is at 700 and has not acted.
 """
 
 from __future__ import annotations

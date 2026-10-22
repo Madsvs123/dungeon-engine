@@ -4,6 +4,13 @@
 immutable. ``EventQueue`` keeps one FIFO list per priority band. ``drain``
 walks bands from the smallest priority number to the largest, preserves push
 order inside a band, returns a new list, and clears the queue.
+
+Example::
+
+    queue = EventQueue()
+    queue.push(Event("wait", 0, 1), priority=1)
+    queue.push(Event("hit", 0, 2), priority=0)
+    queue.drain()  # hit first, then wait; the queue is empty afterwards
 """
 
 from __future__ import annotations

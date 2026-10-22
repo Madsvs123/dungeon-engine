@@ -21,6 +21,12 @@ a substream is drawn. Each named substream gets its own state, derived once:
 
 ``Rng.draw(name)`` runs one SplitMix64 step on that substream only and adds
 one to that substream's counter. ``Rng.counters`` returns a new dict.
+
+Example::
+
+    rng = Rng(42)
+    first_map = rng.draw("map")
+    first_combat = rng.draw("combat")  # the second map draw is still pending
 """
 
 from __future__ import annotations

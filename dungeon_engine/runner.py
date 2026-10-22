@@ -13,6 +13,8 @@ seed is still stored on the state (masked to 64 bits) and is part of the hash.
 
 ``actors=None`` uses ``default_actors``. Any other list, including an empty
 one, is copied and used as given. Actor ``energy`` is updated in place.
+``run(seed, turns)`` is the CLI's loop. ``run(seed, turns, actors=[])`` is the
+empty roster.
 """
 
 from __future__ import annotations

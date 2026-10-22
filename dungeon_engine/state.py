@@ -6,6 +6,8 @@ and ``allow_nan=False``. Actors are ordered by id before encoding. The object
 contains ints, strings, lists, and dicts only. There are no sets.
 
 Counter keys in the hash are exactly ``combat``, ``loot``, and ``map``.
+Call ``state_hash`` on the ``GameState`` returned by a run. Callers do not
+need to sort actors first; ``canonical_payload`` orders them by id.
 """
 
 from __future__ import annotations
